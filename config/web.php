@@ -9,7 +9,7 @@ $config = [
     'bootstrap' => [
         'log',
         function() {
-            //
+            //Register the main business logic for our test task
             Yii::$app->on(\app\models\TestTaskForm::TEST_TASK_SENT,
                 ['app\handlers\TestTaskRepeatHandler', 'handleTestTaskEvent']
                 );
